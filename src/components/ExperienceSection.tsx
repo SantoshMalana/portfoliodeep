@@ -111,13 +111,16 @@ export default function ExperienceSection() {
           </h3>
           <div className="grid sm:grid-cols-3 gap-4">
             {CERTIFICATIONS.map((cert, i) => (
-              <motion.div
+              <motion.a
                 key={cert.title}
+                href={cert.link}
+                target={cert.link ? "_blank" : undefined}
+                rel={cert.link ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 28, scale: 0.93 }}
                 animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ delay: 0.65 + i * 0.1, type: 'spring', stiffness: 240 }}
-                whileHover={{ y: -6, scale: 1.03 }}
-                className="rounded-xl p-5 cursor-default transition-all duration-400 group"
+                whileHover={cert.link ? { y: -6, scale: 1.03 } : {}}
+                className={`rounded-xl p-5 transition-all duration-400 group relative overflow-hidden ${cert.link ? 'cursor-pointer' : 'cursor-default'}`}
                 style={{
                   background: 'hsl(222 22% 7% / 0.8)',
                   border: '1px solid hsl(222 18% 14%)',
@@ -126,20 +129,26 @@ export default function ExperienceSection() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-2xl">{cert.icon}</span>
-                  <span className="mono text-xs text-muted-foreground/45">{cert.date}</span>
+                  <div className="flex flex-col items-end">
+                    <span className="mono text-[10px] text-muted-foreground/45 uppercase tracking-wider">{cert.date}</span>
+                    {cert.link && (
+                      <span className="text-[10px] text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">VIEW CERTIFICATE ↗</span>
+                    )}
+                  </div>
                 </div>
                 <p className="text-foreground font-medium text-sm group-hover:text-primary transition-colors duration-300">
                   {cert.title}
                 </p>
                 <p className="text-muted-foreground text-xs mt-1">{cert.org}</p>
+
                 {/* Bottom accent */}
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="h-px mt-3 bg-gradient-to-r from-primary to-accent origin-left"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary to-accent origin-left"
                 />
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>

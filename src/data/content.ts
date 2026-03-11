@@ -112,8 +112,8 @@ export const SKILLS = [
 ];
 
 export const CERTIFICATIONS = [
-  { title: 'VLSI System on Chip Design', org: 'Maven Silicon', date: 'Feb 2026', icon: '🔶' },
-  { title: 'DBMS', org: 'NPTEL', date: 'Mar 2025', icon: '☁️' },
+  { title: 'VLSI System on Chip Design', org: 'Maven Silicon', date: 'Feb 2026', icon: '🔶', link: 'https://drive.google.com/file/d/19DNdKfCIUNQIDfmAvRLlnZB2pUIugWBY/view?usp=drive_link' },
+  { title: 'DBMS', org: 'NPTEL', date: 'Mar 2025', icon: '☁️', link: 'https://drive.google.com/file/d/1KmAzsmFRpW4_LGGKxim5OrhObVLnJW92/view?usp=drive_link' },
   { title: 'Python Programming', org: 'Coursera', date: 'May 2024', icon: '🐍' },
   { title: 'C', org: 'HackerRank', date: 'Mar 2023', icon: '💻' },
 ];
