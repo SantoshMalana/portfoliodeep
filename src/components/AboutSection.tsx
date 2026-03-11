@@ -139,7 +139,7 @@ export default function AboutSection() {
                   {/* Photo */}
                   <div className="relative w-24 h-24 rounded-full overflow-hidden">
                     <img
-                      src="/avatar.jpg?v=3"
+                      src="/avatar.jpg?v=4"
                       alt="P. Sridhar"
                       className="w-full h-full object-cover object-top"
                       style={{ filter: 'brightness(1.05) contrast(1.05)' }}

@@ -65,7 +65,7 @@ export default function Navbar() {
                 backgroundImage: 'linear-gradient(135deg, hsl(162 85% 52%), hsl(268 65% 65%))',
               }}
             >
-              PS.
+              SP.
             </span>
             {/* Underline grow */}
             <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-400 rounded-full" />
