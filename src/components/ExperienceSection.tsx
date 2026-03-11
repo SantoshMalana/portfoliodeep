@@ -36,74 +36,12 @@ export default function ExperienceSection() {
           />
         </motion.div>
 
-        {/* Top row: Training + Awards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-
-          {/* Training panel */}
+        {/* Awards Row */}
+        <div className="grid grid-cols-1 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.97 }}
             animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 0.85, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1"
-            style={{
-              background: 'hsl(222 22% 7% / 0.85)',
-              border: '1px solid hsl(222 18% 14%)',
-              backdropFilter: 'blur(20px)',
-              boxShadow: '0 8px 30px -10px rgba(0,0,0,0.35)',
-            }}
-          >
-            {/* Terminal header bar */}
-            <div className="flex items-center gap-2 px-5 py-3 border-b border-border/25 bg-white/[0.02]">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-amber-500/50" />
-                <div className="w-3 h-3 rounded-full bg-primary/50" />
-              </div>
-              <span className="mono text-xs text-muted-foreground/50 ml-2">training.log</span>
-            </div>
-
-            <div className="p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center"
-                  style={{ background: 'hsl(162 85% 48% / 0.1)', border: '1px solid hsl(162 85% 48% / 0.2)' }}
-                >
-                  <Terminal size={16} className="text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground">Training</h3>
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : {}}
-                transition={{ delay: 0.55 }}
-                className="space-y-3 pl-1"
-              >
-                <div className="flex items-center gap-2">
-                  <ChevronRight size={14} className="text-primary" />
-                  <p className="mono text-sm text-primary/75">CodeSmart — July 2025</p>
-                </div>
-                <p className="text-foreground font-medium pl-5">Data Structures in C, C++, and Java</p>
-                <p className="text-muted-foreground text-sm leading-relaxed pl-5">
-                  Intensive 8-week engineering training. Built 3 web apps with React, custom min-heap configs, and responsive frameworks.
-                </p>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={inView ? { opacity: 1 } : {}}
-                  transition={{ delay: 0.85 }}
-                  className="pl-5 mono text-xs text-primary/35 pt-2"
-                >
-                  <span className="animate-pulse">█</span> process completed successfully
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Awards panel */}
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.97 }}
-            animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-            transition={{ duration: 0.85, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1"
             style={{
               background: 'hsl(222 22% 7% / 0.85)',
@@ -129,29 +67,29 @@ export default function ExperienceSection() {
                 >
                   <Award size={16} className="text-accent" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">Awards</h3>
+                <h3 className="text-lg font-semibold text-foreground">Awards &amp; Achievements</h3>
               </div>
 
-              <div className="space-y-3">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {AWARDS.map((award, i) => (
                   <motion.div
                     key={award.title}
                     initial={{ opacity: 0, x: -18 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.6 + i * 0.14 }}
+                    transition={{ delay: 0.5 + i * 0.14 }}
                     whileHover={{ x: 6 }}
-                    className="flex items-start gap-3 p-3 -mx-1 rounded-xl hover:bg-white/[0.03] transition-all duration-300 cursor-default"
+                    className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/[0.03] hover:bg-white/[0.05] transition-all duration-300 cursor-default"
                   >
                     <motion.span
                       animate={inView ? { rotate: [0, -18, 18, 0] } : {}}
                       transition={{ delay: 1.1 + i * 0.3, duration: 0.7 }}
-                      className="text-xl mt-0.5"
+                      className="text-2xl mt-0.5"
                     >
                       {award.emoji}
                     </motion.span>
                     <div>
                       <p className="text-foreground font-medium text-sm">{award.title}</p>
-                      <p className="text-muted-foreground text-xs mt-0.5">{award.desc}</p>
+                      <p className="text-muted-foreground text-xs mt-1 leading-relaxed">{award.desc}</p>
                     </div>
                   </motion.div>
                 ))}
