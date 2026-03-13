@@ -14,7 +14,7 @@ export const PERSONAL = {
   github: 'https://github.com/deepakuriti70',
   linkedin: 'http://www.linkedin.com/in/deepakuriti70/',
   twitter: '',
-  resumeUrl: '#',
+  resumeUrl: 'https://drive.google.com/file/d/1SdlAqFvxn_czrgh85WNENWesWlBeYRLV/view?usp=drive_link',
   availableForWork: true,
 };
 
