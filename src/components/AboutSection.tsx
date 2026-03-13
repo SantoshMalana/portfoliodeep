@@ -140,7 +140,7 @@ export default function AboutSection() {
                   <div className="relative w-24 h-24 rounded-full overflow-hidden">
                     <img
                       src="/avatar.jpg?v=4"
-                      alt="P. Sridhar"
+                      alt="Uriti Deepak Kumar"
                       className="w-full h-full object-cover object-top"
                       style={{ filter: 'brightness(1.05) contrast(1.05)' }}
                     />
@@ -151,6 +151,11 @@ export default function AboutSection() {
                     />
                   </div>
                 </motion.div>
+
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-bold text-foreground">{PERSONAL.name}</h3>
+                  <p className="text-[10px] mono text-primary/60 uppercase tracking-widest">{PERSONAL.taglines[0]}</p>
+                </div>
 
                 <p className="mono text-xs text-primary/60 mb-4">// quick_stats</p>
 

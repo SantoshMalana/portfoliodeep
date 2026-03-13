@@ -173,7 +173,7 @@ export default function HeroSection() {
         <div className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[1.05] mb-6 flex flex-wrap justify-center gap-4">
           <div style={{ perspective: 800 }}>
             <AnimatedWords
-              text={PERSONAL.name.split(' ')[0]}
+              text={PERSONAL.name.split(' ').slice(0, -1).join(' ')}
               className="text-foreground inline-block"
               delay={0.35}
             />
@@ -189,7 +189,7 @@ export default function HeroSection() {
               }}
             >
               <AnimatedWords
-                text={PERSONAL.name.split(' ')[1]}
+                text={PERSONAL.name.split(' ').slice(-1)[0]}
                 delay={0.5}
               />
             </span>
@@ -203,10 +203,10 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Designing hardware systems and digital circuits with precision.
+          Building secure networks and efficient cloud solutions.
           Passionate about{' '}
-          <span className="text-foreground/80">VLSI Design</span>,{' '}
-          <span className="text-foreground/80">Embedded Systems</span> &amp; circuit-level innovation.
+          <span className="text-foreground/80">Network Security</span>,{' '}
+          <span className="text-foreground/80">Cloud Infrastructure</span> &amp; cyber protection.
         </motion.p>
 
         {/* CTA row */}

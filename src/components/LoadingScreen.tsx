@@ -106,7 +106,7 @@ export default function LoadingScreen() {
                                 textShadow: 'none',
                             }}
                         >
-                            SP.
+                            UDK.
                         </motion.div>
                     </div>
 
