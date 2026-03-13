@@ -115,7 +115,7 @@ export const CERTIFICATIONS = [
 ];
 
 export const EDUCATION = [
-  { degree: 'B.Tech - Computer Science and Engineering', school: 'Lovely Professional University', period: 'Aug 2023 – Present', score: 'CGPA: 6.24', color: 'hsl(165 80% 48%)' },
+  { degree: 'B.Tech - Computer Science and Engineering', school: 'Lovely Professional University', period: 'Aug 2023 – Present', score: 'CGPA: 6.42', color: 'hsl(165 80% 48%)' },
   { degree: 'Intermediate', school: 'Sri Chaitanya Junior College', period: 'Jun 2020 – Apr 2022', score: '72%', color: 'hsl(270 60% 60%)' },
   { degree: 'Matriculation', school: 'Bhashyam EM High School', period: 'Jun 2019 – Mar 2022', score: '100%', color: 'hsl(38 92% 60%)' },
 ];
